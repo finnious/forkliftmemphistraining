@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.forkliftmemphistraining.com/sitemap.xml
+
+# The domain www.forkliftmemphistraining.com, entire website, content, traffic & leads are currently FOR SALE.
+# Serious inquiries only – https://creatingvaluellc.com/contact-us/
