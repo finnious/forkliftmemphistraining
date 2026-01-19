@@ -25,7 +25,24 @@
 
   <!-- Same style block as index.html – copy here -->
 
-  <style>/* paste the full <style> content from index.html here */</style>
+
+  <style>
+    :root{--primary:#2ea3f2;--dark:#222;--light:#f8f8f8;}
+    body{font-family:'Open Sans',Arial,sans-serif;margin:0;line-height:1.6;color:#333;background:#fff}
+    header{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08);position:sticky;top:0;z-index:100}
+    .container{max-width:1080px;margin:0 auto;padding:0 1.2rem}
+    h1,h2{color:var(--primary)}
+    nav ul{list-style:none;padding:0;display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin:1rem 0}
+    nav a{color:var(--primary);text-decoration:none;font-weight:600;font-size:1.05rem}
+    nav a:hover{opacity:0.85}
+    main{padding:2.5rem 1rem}
+    img{max-width:100%;height:auto;border-radius:8px;margin:1.8rem 0;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+    .form-box{background:var(--light);padding:2rem;border-radius:10px;max-width:520px;margin:2.5rem auto;text-align:center}
+    footer{background:var(--dark);color:#aaa;text-align:center;padding:2.5rem 1rem;font-size:0.95rem}
+    .highlight{color:#e74c3c;font-weight:bold}
+    .sale-notice{background:#fff3cd;color:#856404;padding:1.2rem;border-radius:8px;margin:1.5rem 0;text-align:center;font-weight:600}
+    @media (max-width:640px){nav ul{flex-direction:column;gap:1rem}}
+  </style>
 </head>
 <body>
 
