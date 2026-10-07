@@ -41,6 +41,14 @@
     footer{background:var(--dark);color:#aaa;text-align:center;padding:2.5rem 1rem;font-size:0.95rem}
     .highlight{color:#e74c3c;font-weight:bold}
     .sale-notice{background:#fff3cd;color:#856404;padding:1.2rem;border-radius:8px;margin:1.5rem 0;text-align:center;font-weight:600}
+    .lead-form{text-align:left;display:flex;flex-direction:column;gap:0.85rem;margin-top:1rem}
+    .lead-form label{font-weight:600;font-size:0.95rem;color:#222;display:block}
+    .lead-form input,.lead-form textarea{display:block;width:100%;box-sizing:border-box;margin-top:0.3rem;padding:0.7rem 0.75rem;border:1px solid #ccc;border-radius:6px;font:inherit;background:#fff}
+    .lead-form textarea{min-height:8rem;resize:vertical}
+    .lead-form button{background:var(--primary);color:#fff;border:0;border-radius:6px;padding:0.85rem 1.2rem;font-weight:700;font-size:1.05rem;cursor:pointer}
+    .lead-form button:hover{background:#1d8bd1}
+    .req{color:#e74c3c}
+    .form-note{font-size:0.9rem;color:#555;margin:0.4rem 0 0}
     @media (max-width:640px){nav ul{flex-direction:column;gap:1rem}}
   </style>
 </head>
@@ -53,6 +61,7 @@
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/forklift-training-near-me.html">Forklift Training Near Me</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -80,14 +89,38 @@
 
     <h2>How to Get Started</h2>
     <ol>
-      <li>Send us a message via the contact page</li>
+      <li>Send us a message with the form below</li>
       <li>Choose one of our 3 daily class times (Mon–Fri)</li>
       <li>Attend hands-on training in Memphis warehouse</li>
       <li>Complete evaluation → receive 3-year OSHA forklift certification</li>
     </ol>
 
+    <div class="form-box" id="near-me-form">
+      <h2>Request Training Near You</h2>
+      <p>Tell us your city and a good class time. Name and email are required.</p>
+      <form class="lead-form" action="/api/lead" method="POST">
+        <input type="hidden" name="formId" value="forklift-near-me">
+        <label>Name <span class="req">*</span>
+          <input name="name" type="text" required maxlength="120" autocomplete="name">
+        </label>
+        <label>Email <span class="req">*</span>
+          <input name="email" type="email" required maxlength="320" autocomplete="email">
+        </label>
+        <label>Phone
+          <input name="phone" type="tel" maxlength="40" autocomplete="tel">
+        </label>
+        <label>Company
+          <input name="company" type="text" maxlength="200" autocomplete="organization">
+        </label>
+        <label>Message
+          <textarea name="message" maxlength="4000"></textarea>
+        </label>
+        <button type="submit">Request training info</button>
+      </form>
+    </div>
+
     <div class="sale-notice">
-      <strong>Note:</strong> Domain, website & leads for sale – serious inquiries only via contact form.
+      <strong>Note:</strong> Domain, website & leads for sale – serious inquiries only via the form above.
     </div>
 
   </div>

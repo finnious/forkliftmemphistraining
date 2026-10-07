@@ -15,9 +15,9 @@
   <meta property="og:description" content="Fast, hands-on forklift certification classes in Memphis. Individual instruction in real warehouse. OSHA 1910.178 compliant. $99 promo available now!">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.forkliftmemphistraining.com/">
-  <meta property="og:image" content="https://www.forkliftmemphistraining.com/forklift-training-class.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image" content="https://www.forkliftmemphistraining.com/forkliftmemphistraining.jpg">
+  <meta property="og:image:width" content="1248">
+  <meta property="og:image:height" content="832">
   <meta property="og:site_name" content="Forklift Training Memphis">
 
   <!-- Twitter / X -->
@@ -109,6 +109,14 @@
     footer{background:var(--dark);color:#aaa;text-align:center;padding:2.5rem 1rem;font-size:0.95rem}
     .highlight{color:#e74c3c;font-weight:bold}
     .sale-notice{background:#fff3cd;color:#856404;padding:1.2rem;border-radius:8px;margin:1.5rem 0;text-align:center;font-weight:600}
+    .lead-form{text-align:left;display:flex;flex-direction:column;gap:0.85rem;margin-top:1rem}
+    .lead-form label{font-weight:600;font-size:0.95rem;color:#222;display:block}
+    .lead-form input,.lead-form textarea{display:block;width:100%;box-sizing:border-box;margin-top:0.3rem;padding:0.7rem 0.75rem;border:1px solid #ccc;border-radius:6px;font:inherit;background:#fff}
+    .lead-form textarea{min-height:8rem;resize:vertical}
+    .lead-form button{background:var(--primary);color:#fff;border:0;border-radius:6px;padding:0.85rem 1.2rem;font-weight:700;font-size:1.05rem;cursor:pointer}
+    .lead-form button:hover{background:#1d8bd1}
+    .req{color:#e74c3c}
+    .form-note{font-size:0.9rem;color:#555;margin:0.4rem 0 0}
     @media (max-width:640px){nav ul{flex-direction:column;gap:1rem}}
   </style>
 </head>
@@ -121,6 +129,7 @@
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/forklift-training-near-me.html">Forklift Training Near Me</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -148,13 +157,33 @@
     <h2>Memphis Forklift Jobs Are Waiting</h2>
     <p>Certified operators are in high demand across the Memphis distribution and logistics hub. Get trained → get hired quickly.</p>
 
-    <div class="form-box">
+    <div class="form-box" id="request-info">
       <h3>Request Class Information</h3>
-      <p>Use the contact page to send us a message</p>
+      <p>Tell us how to reach you. Name and email are required.</p>
+      <form class="lead-form" action="/api/lead" method="POST">
+        <input type="hidden" name="formId" value="forklift-home">
+        <label>Name <span class="req">*</span>
+          <input name="name" type="text" required maxlength="120" autocomplete="name">
+        </label>
+        <label>Email <span class="req">*</span>
+          <input name="email" type="email" required maxlength="320" autocomplete="email">
+        </label>
+        <label>Phone
+          <input name="phone" type="tel" maxlength="40" autocomplete="tel">
+        </label>
+        <label>Company
+          <input name="company" type="text" maxlength="200" autocomplete="organization">
+        </label>
+        <label>Message
+          <textarea name="message" maxlength="4000"></textarea>
+        </label>
+        <button type="submit">Request class info</button>
+      </form>
+      <p class="form-note">Or use the <a href="/contact-us.html">contact page</a>.</p>
     </div>
 
     <div class="sale-notice">
-      <strong>Business Opportunity:</strong> This domain (forkliftmemphistraining.com), the entire website, content, traffic and leads are currently FOR SALE. Serious inquiries welcome via the contact page.
+      <strong>Business Opportunity:</strong> This domain (forkliftmemphistraining.com), the entire website, content, traffic and leads are currently FOR SALE. Serious inquiries welcome via the form above or the <a href="/contact-us.html">contact page</a>.
     </div>
 
   </div>
